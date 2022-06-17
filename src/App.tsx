@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect, useState} from 'react';
+import {useAppDispatch, useAppSelector} from "./hooks/redux";
+import {addTodo} from "./store/TodoSlice";
+import {addToStorage} from "./utils/LocalStorageExplorer";
+import {getForecast} from "./store/ForecastSlice";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const [titleTodo, setTitleTodo] = useState<string>('')
+    const dispatch = useAppDispatch()
+    const todos = useAppSelector(state => state.todos.value)
+
+    const handleAddTodo = () => {
+        dispatch(addTodo({id: Date.now(), completed: false, title: titleTodo}))
+    }
+
+    useEffect(() => {
+        dispatch(getForecast('Moscow'))
+    }, [])
+
+    useEffect(() => {
+        addToStorage('todos', todos)
+    }, [todos])
+
+    return (
+        <div className="w-100p f-center-row">
+            <div>
+                <input type="text" onChange={event => setTitleTodo(event.target.value)}/>
+                <button onClick={handleAddTodo}>
+                    Добавить
+                </button>
+            </div>
+
+        </div>
+    );
+};
 
 export default App;
