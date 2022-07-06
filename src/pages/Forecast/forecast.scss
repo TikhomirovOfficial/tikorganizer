@@ -1,0 +1,124 @@
+.forecast {
+  max-width: 70%;
+  color: white;
+  height: 100%;
+  .forecast__search {
+    input {
+      background: #260956;
+      font-size: 20px;
+      padding: 15px 30px;
+      @media (max-width: 1700px) {
+        & {
+          font-size: 18px;
+        }
+      }
+    }
+    button {
+      padding: 0 30px;
+      font-size: 20px;
+      @media (max-width: 1700px) {
+        & {
+          font-size: 18px;
+        }
+      }
+      background: #EB2200;
+    }
+  }
+  .forecast__main {
+    .forecast__img {
+      width: 265px;
+      @media (max-width: 1700px) {
+        & {
+          width: 150px;
+        }
+      }
+    }
+    h1 {
+      font-size: 80px;
+    }
+    h2 {
+      font-size: 40px;
+      color: #CECECE;
+    }
+    @media (max-width: 1700px) {
+      h1 {
+        font-size: 60px;
+      }
+      h2 {
+        font-size: 30px;
+      }
+    }
+    .forecast__geo {
+      img {
+        width: 30px;
+        @media (max-width: 1700px) {
+          & {
+            width: 26px;
+          }
+        }
+
+      }
+      margin-top: 10px;
+      font-size:24px;
+      background: #461BA3;
+      padding: 12px 30px;
+      border-radius: 10px;
+      @media (max-width: 1700px) {
+        & {
+          font-size: 18px;
+          padding: 6px 20px;
+        }
+      }
+    }
+  }
+  .forecast-hourly {
+    .forecast-hourly__item {
+      img {
+        width: 55px;
+        @media (max-width: 1700px) {
+          & {
+            width: 45px;
+          }
+        }
+      }
+    }
+
+    .hourly-time {
+      color: #CACACA;
+    }
+  }
+  .forecast-daily {
+    .forecast-daily__item {
+      h2 {
+        @media (max-width: 1700px) {
+          & {
+            font-size: 20px;
+          }
+        }
+      }
+      img {
+        width: 45px;
+        @media (max-width: 1700px) {
+          & {
+            width: 35px;
+          }
+        }
+      }
+      span {
+        font-size: 23px;
+      }
+      .forecast-daily__degs {
+        min-width: 150px;
+      }
+      .night-deg {
+        color: #8E8E8E;
+      }
+    }
+  }
+}
+.empty__title {
+  font-size: 70px;
+}
+.empty__text {
+  font-size: 24px;
+}

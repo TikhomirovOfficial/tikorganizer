@@ -22,5 +22,9 @@ export interface IForecast {
     value: {
         today: IHoursForecastItem[]
         week: IDayForecastItem[]
+        city: string
     }
+    isLoading: boolean,
+
+
 }

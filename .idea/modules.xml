@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/tikorganizer.iml" filepath="$PROJECT_DIR$/.idea/tikorganizer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/tikweather.iml" filepath="$PROJECT_DIR$/.idea/tikweather.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,24 @@
+.sidebar {
+  width: 304px;
+  color: white;
+  background: #774CF0;
+  .sidebar__title {
+    margin-top: 50px;
+  }
+  .sidebar__created {
+    margin-bottom: 30px;
+  }
+  .navbar {
+    flex: 0.7;
+    .navbar__item {
+      padding: 45px 0;
+      img {
+        width: 65px;
+        height: 65px;
+      }
+    }
+    .navbar__item-active {
+      background: #663DDA;
+    }
+  }
+}
