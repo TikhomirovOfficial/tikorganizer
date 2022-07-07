@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tikweather/static/css/main.4cef3645.css",
+    "main.js": "/tikweather/static/js/main.eba8b212.js",
+    "index.html": "/tikweather/index.html",
+    "main.4cef3645.css.map": "/tikweather/static/css/main.4cef3645.css.map",
+    "main.eba8b212.js.map": "/tikweather/static/js/main.eba8b212.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4cef3645.css",
+    "static/js/main.eba8b212.js"
+  ]
+}
