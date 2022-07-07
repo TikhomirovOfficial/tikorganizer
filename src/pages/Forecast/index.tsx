@@ -49,7 +49,8 @@ const Forecast: FC = () => {
                         <div className="forecast-hourly flex-row-betw">
                             {
                                 forecastData.value.today.map(item => (
-                                    <HourlyForecastItem date_time={item.date_time} weather={item.weather} deg={item.deg}/>
+                                    <HourlyForecastItem date_time={item.date_time} weather={item.weather}
+                                                        deg={item.deg}/>
                                 ))
                             }
                         </div>
@@ -65,18 +66,19 @@ const Forecast: FC = () => {
                                 ))
                             }
                         </div>
-                    </>     :
+                    </> :
                     <div className="h-100p w-100p f-center-col">
-                        <div className="f-center-col c-white gap-30">
+                        <div className="empty f-center-col c-white gap-30">
                             <div className="d-f al-center gap-30">
-                                <img src="img/is_empty.svg" alt=""/>
+                                <img className="empty__img" src="img/is_empty.svg" alt=""/>
                                 <h1 className="empty__title">Пусто</h1>
                             </div>
                             <p className="empty__text">Выберите населенный пункт.</p>
                         </div>
                     </div>
-
             }
+
+
 
         </div>
     );

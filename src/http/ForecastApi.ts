@@ -4,7 +4,6 @@ import {cfg} from "../config";
 import {IDayForecastItem, IHoursForecastItem, WeatherType} from "../models/IForecast";
 import {getCelsius} from "../utils/getCelsius";
 
-
 const forecastInstance = axios.create({
     baseURL: 'https://community-open-weather-map.p.rapidapi.com/forecast',
     headers: {
@@ -13,7 +12,6 @@ const forecastInstance = axios.create({
     }
 
 })
-
 export class ForecastApi {
 
     static async getHourlyForecast(city: string) {
@@ -40,7 +38,6 @@ export class ForecastApi {
     static async getDailyForecast(city: string) {
         try {
             const {data} = await forecastInstance.get<IForecastDailyResponse>(`/daily?cnt=${cfg.COUNT_DATA}&q=${city}`)
-
             const weekForecastData: IDayForecastItem[] = [
                 ...data.list.map<IDayForecastItem>(item => {
                         return {
@@ -54,7 +51,6 @@ export class ForecastApi {
             ]
 
             return weekForecastData
-
         } catch (e: any) {
             throw new Error(e.message)
         }

@@ -9,7 +9,8 @@ const initialState = {
         week: [],
         city: ''
     },
-    isLoading: false
+    isLoading: false,
+    isRejected: false
 } as IForecast
 
 export const getForecast = createAsyncThunk(
@@ -24,7 +25,8 @@ export const getForecast = createAsyncThunk(
                 week: dailyData,
                 city: cityValue
             },
-            isLoading: false
+            isLoading: false,
+            isRejected: false
         }
         return data
     }
@@ -40,9 +42,14 @@ export const ForecastSlice = createSlice({
             addToStorage('target_city', action.payload.value.city)
             state.isLoading = false
         })
+        builder.addCase(getForecast.rejected, (state) => {
+            state.isRejected = true
+            state.isLoading = false
+        })
         builder.addCase(getForecast.pending, (state) => {
             state.isLoading = true
         })
+
     }
 })
 export const ForecastReducer = ForecastSlice.reducer

@@ -1,9 +1,7 @@
 import {combineReducers, configureStore} from '@reduxjs/toolkit'
-import {TodoReducer} from "./TodoSlice";
 import {ForecastReducer} from "./ForecastSlice";
 
 const rootReducer = combineReducers({
-    todos: TodoReducer,
     forecast: ForecastReducer
 })
 

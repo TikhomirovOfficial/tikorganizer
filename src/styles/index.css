@@ -11,3 +11,8 @@ body {
   padding: 50px 0;
   justify-content: center;
 }
+@media (max-width: 800px) {
+  .page-wrapper {
+    padding: 25px 0;
+  }
+}

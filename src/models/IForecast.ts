@@ -25,6 +25,7 @@ export interface IForecast {
         city: string
     }
     isLoading: boolean,
+    isRejected: boolean
 
 
 }
