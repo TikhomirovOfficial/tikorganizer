@@ -44,7 +44,7 @@ const Forecast: FC = () => {
                                     <span>{forecastData.value.city}</span>
                                 </div>
                             </div>
-                            <img className="forecast__img" src="img/forecast_sunny.svg" alt=""/>
+                            <img className="forecast__img" src={getForecastIcon(forecastData.value.today[0].weather)} alt=""/>
                         </div>
                         <div className="forecast-hourly flex-row-betw">
                             {
